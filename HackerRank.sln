@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SherlockAndTheBeast", "Sher
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShinuAndCoins", "ShinuAndCoins\ShinuAndCoins.csproj", "{7E3021D2-3EFD-43C5-A160-130AD82FCAEA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LittleShinoAndTheTournament", "LittleShinoAndTheTournament\LittleShinoAndTheTournament.csproj", "{00379F74-8361-4A94-B5D7-014D06765811}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{7E3021D2-3EFD-43C5-A160-130AD82FCAEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E3021D2-3EFD-43C5-A160-130AD82FCAEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7E3021D2-3EFD-43C5-A160-130AD82FCAEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00379F74-8361-4A94-B5D7-014D06765811}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00379F74-8361-4A94-B5D7-014D06765811}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00379F74-8361-4A94-B5D7-014D06765811}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00379F74-8361-4A94-B5D7-014D06765811}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
