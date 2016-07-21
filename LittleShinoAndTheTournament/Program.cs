@@ -7,28 +7,32 @@ using System.Threading.Tasks;
 namespace LittleShinoAndTheTournament
 {
 
-    class Program
+    public class Program
     {
         //https://www.hackerearth.com/july-circuits/algorithm/little-shino-and-the-tournament/
-
+      
         static void Main(string[] args)
         {
-            Queue<int> queue = new Queue<int>();
+
+           // Queue<int> queue = new Queue<int>();
             var read = Console.ReadLine().Split(' ');
             var n = Convert.ToInt32(read[0]);
             var q = Convert.ToInt32(read[1]);
 
-            int[] strengths = new int[n];
+            int[] strengths =  new int[n ] ;
             int[] queries = new int[q];
-            int[] participationCountArry = new int[n];
 
-            ReadInArray(strengths, n, queue);
+
+            int[] participantsArry = new int[n + 1];
+        
+            ReadInArray(strengths, participantsArry);//, queue
             ReadInLine(queries, q);
 
-            Fight(strengths, participationCountArry, queue);
+            //Fight(strengths, participationCountArry, queue);
+            
+            var result = SolveFight(participantsArry, strengths, n);
 
-            PrintResult(participationCountArry, queries);
-
+            PrintResult(result, queries);
         }
 
 
@@ -71,14 +75,19 @@ namespace LittleShinoAndTheTournament
 
         }
 
-        private static void ReadInArray(int[] arry, int len, Queue<int> queue)
+        private static void ReadInArray(int[] strengthArry,  int[] participantsArry) //Queue<int> queue,
         {
+            int i;
             var array = Console.ReadLine().Split(' ');
-            for (int i = 0; i < array.Length; i++)
+
+            for (i = 0; i < array.Length; i++)
             {
-                arry[i] = Convert.ToInt32(array[i]);
-                queue.Enqueue(i);
+                strengthArry[i] = Convert.ToInt32(array[i]);
+                participantsArry[i] = i;
+               // queue.Enqueue(i);
             }
+
+            participantsArry[array.Length] = -1;
         }
 
         private static void ReadInLine(int[] arry, int len)
@@ -94,7 +103,56 @@ namespace LittleShinoAndTheTournament
             for (int i = 0; i < queries.Length; i++)
             {
                 Console.WriteLine(resultArry[queries[i] - 1]);
+               
             }
+        }
+
+        public static int[] SolveFight(int[] participantsArry, int[] strengths, int p)
+        {
+            int index = 0;
+            int nextIndex = -1;
+            int[] playCount = new int[p];
+
+            while (participantsArry[index] > -1 && participantsArry[index + 1] > -1 )
+            {
+                
+                while (true)
+                {
+                    if (participantsArry[index] == -1)
+                    {
+                        break;
+                    }
+
+                    if (participantsArry[index + 1] == -1 )
+                    {
+                        participantsArry[++nextIndex] = participantsArry[index];
+                        participantsArry[index] = -1;
+
+                        break;
+                    }
+
+                    var p1 = participantsArry[index];
+                    var p2 = participantsArry[index + 1];
+
+                    playCount[p1]++;
+                    playCount[p2]++;
+
+                    var maxtemp = strengths[p1] > strengths[p2] ? p1 : p2;
+
+                    participantsArry[index] = -1;
+                    participantsArry[index + 1] = -1;
+
+                    participantsArry[++nextIndex] = maxtemp;
+
+                    index += 2;
+                }
+
+                index = 0;
+                nextIndex = -1;
+            }
+
+            return playCount;
+           
         }
 
     }

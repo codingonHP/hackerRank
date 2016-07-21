@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{00379F74-8361-4A94-B5D7-014D06765811}</ProjectGuid>
+    <ProjectGuid>{20A8599B-6699-4953-8C2B-7327ED1AA3AA}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LittleShinoAndTheTournament</RootNamespace>
-    <AssemblyName>LittleShinoAndTheTournament</AssemblyName>
+    <RootNamespace>LittleShinoAndTheTournamentRecursive</RootNamespace>
+    <AssemblyName>LittleShinoAndTheTournamentRecursive</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -48,7 +48,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Program.c" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
