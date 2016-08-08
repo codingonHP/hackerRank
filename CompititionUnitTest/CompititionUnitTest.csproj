@@ -54,6 +54,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BennyAndTheUniverse\BennyAndTheUniverse.csproj">
+      <Project>{2f2491b5-f830-468a-a5c4-b6871ce9b0ab}</Project>
+      <Name>BennyAndTheUniverse</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ConsoleApplication1\ShinoAndFibonacci.csproj">
       <Project>{F51D58A7-03CE-4A42-950D-9FA9C5F0D1C8}</Project>
       <Name>ShinoAndFibonacci</Name>
@@ -61,6 +65,10 @@
     <ProjectReference Include="..\LittleShinoAndTheTournament\LittleShinoAndTheTournament.csproj">
       <Project>{00379F74-8361-4A94-B5D7-014D06765811}</Project>
       <Name>LittleShinoAndTheTournament</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RhezoAndDivisibilityBy7\RhezoAndDivisibilityBy7.csproj">
+      <Project>{a506d7a3-e4cf-46e4-b096-7b101133c9e9}</Project>
+      <Name>RhezoAndDivisibilityBy7</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>
